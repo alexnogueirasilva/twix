@@ -53,9 +53,6 @@ defmodule TwixWeb.Schema.Types.Root do
       config fn _args, _context ->
         {:ok, topic: "new_follow_topic"}
       end
-      resolve fn _args, _contexto ->
-        {:ok, %{}}
-      end
     end
   end
 end
