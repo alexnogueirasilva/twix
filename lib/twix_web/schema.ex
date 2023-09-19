@@ -12,4 +12,8 @@ defmodule TwixWeb.Schema do
   mutation do
     import_fields :root_mutation
   end
+
+  subscription do
+    import_fields :root_subscription
+  end
 end
