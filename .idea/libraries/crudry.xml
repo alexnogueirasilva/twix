@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="crudry" type="mix">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/crudry/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/crudry/ebin" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/deps/crudry/lib" />
+      <root url="file://$PROJECT_DIR$/deps/crudry/lib" />
+    </SOURCES>
+  </library>
+</component>
