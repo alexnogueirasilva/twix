@@ -11,7 +11,7 @@ defmodule TwixWeb.Router do
     forward "/graphql", Absinthe.Plug, schema: TwixWeb.Schema
     forward "/graphiql", Absinthe.Plug.GraphiQL,
             socket: TwixWeb.TwixGraphQLSocket,
-            schema: TwixWeb.Schema, interface: :simple
+            schema: TwixWeb.Schema
   end
 
   # Enable LiveDashboard in development

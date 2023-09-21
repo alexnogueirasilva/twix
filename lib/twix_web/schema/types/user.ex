@@ -3,13 +3,22 @@ defmodule TwixWeb.Schema.Types.User do
 
   use Absinthe.Schema.Notation
 
+  alias TwixWeb.Resolvers.User, as: UserResolver
+
 @desc "Get user by id and return a user and create a user and update a user"
   object :user do
     field :id, non_null(:id)
     field :nickname, non_null(:string)
     field :age, non_null(:integer), description: "Need to be 18+"
     field :email, non_null(:string)
-    field :posts, list_of(:post)
+
+    field :posts, list_of(:post) do
+      arg :page, :integer, default_value: 1
+      arg :per_page, :integer, default_value: 15
+
+      resolve &UserResolver.get_posts/3
+    end
+
     field :followers, list_of(:follower)
     field :followings, list_of(:following)
   end
