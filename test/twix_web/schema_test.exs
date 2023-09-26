@@ -66,4 +66,33 @@ defmodule SchemaTest do
       assert response == expected_response
     end
   end
+
+  describe "users mutation" do
+    test "when the params are valid, create the user", %{conn: conn} do
+
+      query = """
+        mutation {
+          createUser(
+            input: {
+              nickname: "Bruna",
+              email: "bruna@gmail.com.br",
+              age: 20,
+            }
+          ) {
+            id
+            nickname
+            email
+            age
+          }
+        }
+      """
+
+      response =
+      conn
+      |> post("/api/graphql", %{query: query})
+      |> json_response(200)
+
+      assert %{"data" => %{"createUser" => %{"age" => 20, "email" => "bruna@gmail.com.br", "id" => _id, "nickname" => "Bruna"}}} = response
+    end
+  end
 end
