@@ -86,6 +86,12 @@
       <excludeFolder url="file://$MODULE_DIR$/_build/test/lib/telemetry_poller" />
       <excludeFolder url="file://$MODULE_DIR$/_build/test/lib/websock" />
       <excludeFolder url="file://$MODULE_DIR$/_build/test/lib/websock_adapter" />
+      <excludeFolder url="file://$MODULE_DIR$/_build/dev/lib/bunt" />
+      <excludeFolder url="file://$MODULE_DIR$/_build/dev/lib/credo" />
+      <excludeFolder url="file://$MODULE_DIR$/_build/dev/lib/file_system" />
+      <excludeFolder url="file://$MODULE_DIR$/_build/test/lib/bunt" />
+      <excludeFolder url="file://$MODULE_DIR$/_build/test/lib/credo" />
+      <excludeFolder url="file://$MODULE_DIR$/_build/test/lib/file_system" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
@@ -178,5 +184,15 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Elixir 1.15.7-otp-26">
+        <CLASSES />
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="library" name="file_system" level="project" />
+    <orderEntry type="library" name="bunt" level="project" />
+    <orderEntry type="library" name="inch_ex" level="project" />
   </component>
 </module>
