@@ -14,6 +14,12 @@ defmodule TwixWeb.Router do
             schema: TwixWeb.Schema
   end
 
+  scope "/api" do
+    pipe_through :api
+
+    get "/users", TwixWeb.User.UserController, :index
+  end
+
   # Enable LiveDashboard in development
   if Application.compile_env(:twix, :dev_routes) do
     # If you want to use the LiveDashboard in production, you should put
